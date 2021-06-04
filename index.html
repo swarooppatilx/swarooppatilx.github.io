@@ -10,8 +10,26 @@ html {
 </style>
 <div id="center">
 <img src="pbook.png" width="100px" height="100px" >
-<h3>Starting Pbook...</h3>
+<h3 id=txt >Starting Pbook</h3>
 </div>
-<script>window.location.replace("https://000pbook.000webhostapp.com");</script>
-<a href="https://000pbook.000webhostapp.com">Go To Pbook</a>
+<script>
+var txt = document.getElementById("txt");
+var i = 0;
+var Int = setInterval(function(){
+	if(i < 3){
+		i++;
+		txt.innerText += ".";
+	}
+	else {
+		clearInterval(Int);
+	}
+}, 1000);
+
+
+
+setTimeout(
+	function (){
+	window.location.replace("https://000pbook.000webhostapp.com");
+		}, 5000);
+	</script>
 </html>
