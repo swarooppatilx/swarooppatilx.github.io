@@ -1,6 +1,9 @@
 
-<button>
+<ul>
+<li>
 <a href="./quickdl">Quick Links</a>
-</button>
-<br>
+</li>
+<li>
 <a href="./pbook">Pbook</a>
+</li>
+</ul>
