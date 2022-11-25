@@ -1,0 +1,20 @@
+<html>
+<head><title>Age Calculator</title>
+</head>
+<body>
+<button onclick="agec()">Caculate My Age</button>
+<script>
+
+function agec(){
+var year = parseInt(prompt("Enter your year of birth"));
+
+var d = new Date();
+date = parseInt(d.getFullYear());
+
+var age = (date-year) || 0;
+alert("You are "+age+" years old !");
+}
+
+</script>
+</body>
+</html>
