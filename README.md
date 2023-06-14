@@ -4,7 +4,7 @@
 <a href="./pbook">Pbook</a> (down)
 </li>
  <li>
-<a href="https://star-quiz.netlify.app">Star Quiz</a>
+<a href="https://star-quiz-v2.netlify.app">Star Quiz</a>
 </li>
 <li>
 <a href="https://jyoti-caters.netlify.app">Jyoti Caters</a>
