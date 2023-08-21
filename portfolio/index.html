@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Displays My Education, Skills and Projects">
+    <meta name="author" content="Piyush Patil">
 
-    <title>Piyush Patil | Portfolio</title>
+    <title>Portfolio</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/unicons.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/66289578?v=4" />
+    <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/66289578?v=4">
 
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
@@ -32,7 +34,7 @@ https://www.tooplate.com/view/2115-marvel
     margin: 5px;
   }
 </style>
-          
+<link rel="manifest" href="/manifest.json">    
   </head>
   <body>
 
@@ -348,6 +350,11 @@ https://www.tooplate.com/view/2115-marvel
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' });
+      }
+      </script>
 
   </body>
 </html>
