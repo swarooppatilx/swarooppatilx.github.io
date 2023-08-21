@@ -1,6 +1,9 @@
 # Projects
 <ul>
 <li>
+<a href="/portfolio">Portfolio/Landing Page</a>
+</li>
+<li>
 <a href="./pbook">Pbook</a> (down)
 </li>
  <li>
@@ -16,7 +19,7 @@
 <a href="Https://github.com/piyushpatilx/easy-aes">Easy AES</a>
 </li>
 <li>
-<a href="https://jyoti-caters.netlify.app">Jyoti Caters Admin Panel</a>
+<a href="https://jyoti-caters.netlify.app">Jyotirling Caters Admin Panel</a>
 </li>
  <li>
 <a href="https://jeetservishesh.netlify.app">Jeet Servishesh landing page</a>
