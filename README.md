@@ -3,6 +3,13 @@
 <li>
 <a href="/portfolio">Portfolio/Landing Page</a>
 </li>
+ <li>
+<a href="https://thala-07.netlify.app">Thala For a Reason</a>
+</li>
+ <li>
+<a href="https://time-elapsed.netlify.app">Time Elapsed</a>
+</li>
+
 <li>
 <a href="./pbook">Pbook</a> (down)
 </li>
