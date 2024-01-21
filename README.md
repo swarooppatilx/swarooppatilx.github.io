@@ -35,6 +35,6 @@
 <a href="./agecalc.html">Age Calculator</a>
 </li>
 <li>
-<a href="https://github.com/piyushpatilx">Other Projects</a>
+<a href="https://github.com/swarooppatilx">Other Projects</a>
 </li>
 </ul>
