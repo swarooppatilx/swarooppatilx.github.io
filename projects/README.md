@@ -4,16 +4,16 @@
 <a href="https://scruter.onrender.com">Scruter</a>
 </li>
  <li>
-<a href="https://facerecon.pythonanywhere.com">Face Recon</a></a>
+<a href="https://facerecon.pythonanywhere.com">Face Recon</a>
 </li>
  <li>
-<a href="https://end-hunger.onrender.com">End Hunger</a></a>
+<a href="https://end-hunger.onrender.com">End Hunger</a>
 </li>
  <li>
-<a href="https://sound-polluton.netlify.app">Sound Pollution Detector</a></a>
+<a href="https://sound-polluton.netlify.app">Sound Pollution Detector</a>
 </li>
  <li>
-<a href="https://wheather666.netlify.app">Wheater Info</a></a>
+<a href="https://wheather666.netlify.app">Wheater Info</a>
 </li>
  <li>
 <a href="https://thala-07.netlify.app">Thala For a Reason</a>
