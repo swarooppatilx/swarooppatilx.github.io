@@ -1,10 +1,13 @@
 # Projects
 <ul>
  <li>
-<a href="https://scruter.onrender.com">Scruter</a>
+<a href="https://scruter.vercel.app">Scruter</a>
 </li>
  <li>
-<a href="https://facerecon.pythonanywhere.com">Face Recon</a>
+  <li>
+<a href="https://code-complexity-analyzer.vercel.app">Code Complexity Analyzer</a>
+</li>
+<a href="https://facerecon.pythonanywhere.com">Face Recon (Down)</a>
 </li>
  <li>
 <a href="https://end-hunger.onrender.com">End Hunger</a>
@@ -13,6 +16,15 @@
 <a href="https://sound-polluton.netlify.app">Sound Pollution Detector</a>
 </li>
  <li>
+<a href="https://star-quiz-v2.netlify.app">Star Quiz</a>
+</li>
+ <li>
+  <a href="https://netficks-clone.netlify.app/">Netflix Clone (Netlify)</a>
+ </li>
+ <li>
+  <a href="https://netflix-8h2i.onrender.com">Netflix Clone (Render, Down)</a>
+ </li>
+ <li>
 <a href="https://wheather666.netlify.app">Wheater Info</a>
 </li>
  <li>
@@ -20,15 +32,6 @@
 </li>
  <li>
 <a href="https://time-elapsed.netlify.app">Time Elapsed</a>
-</li>
- <li>
-  <a href="https://netflix-clone-v4.netlify.app">Netflix Clone (Netlify)</a>
- </li>
- <li>
-  <a href="https://netflix-8h2i.onrender.com">Netflix Clone (Render)</a>
- </li>
- <li>
-<a href="https://star-quiz-v2.netlify.app">Star Quiz</a>
 </li>
  <li>
 <a href="Https://github.com/swarooppatilx/easy-aes">Easy AES</a>
