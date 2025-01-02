@@ -1,0 +1,224 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\Huge \scshape Swaroop Patil} \\ \vspace{1pt}
+  Pune, Maharashtra \\ \vspace{1pt}
+  \small \href{tel:#}{ \raisebox{-0.1\height}\faPhone\ \underline{+91-9172061027} ~} \href{mailto:swarooppatil850@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{swarooppatil850@gmail.com}} ~ 
+  \href{https://linkedin.com/in/swarooppatilx}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{Linkedin}}  ~
+  \href{https://github.com/swarooppatilx}{\raisebox{-0.2\height}\faGithub\ \underline{Github}} ~
+  \href{https://x.com/swarooppatilx}{\raisebox{-0.2\height}\faTwitter\ \underline{Twitter}} ~
+  \href{https://swarooppatilx.github.io}{\raisebox{-0.2\height}\faGlobe\ \underline{Website}} ~
+\end{center}
+\vspace{0.5mm}
+
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {AISSMS Institute of Information Technology, Pune}{2023 – 2027}
+      {B.Tech - Information Technology - \textbf{CGPA} - \textbf{9.0}}{Pune, Maharashtra}
+  \resumeSubHeadingListEnd
+
+%-------------EXPERIENCE-----------
+\section{EXPERIENCE}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\href{https://hosteze.in}{\textbf{\large{\underline{Developer Intern at Hosteze}}}}}{Aug 2024 - Sep 2024}\\
+          \resumeItemListStart
+         \resumeItem{\normalsize{Implemented a "Contact via WhatsApp" feature, enabling users to initiate seamless communication directly from the platform. This integration boosted engagement and facilitated direct user interactions.}}
+         \resumeItem{\normalsize{Implemented advanced loading skeletons to enhance perceived loading times, delivering a smoother and more responsive user experience.}}
+         \resumeItem{\normalsize{Technology Stack: Leveraged ReactJS, NextJS, TypeScript, and Tailwind CSS to optimize frontend performance, build reusable components, and improve code maintainability.}}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\href{https://ioittenet.com}{\textbf{\large{\underline{Developer at ACM Web Team}}}}}{Jul 2024 - Present}\\
+          \resumeItemListStart
+        \resumeItem{\normalsize{Contributed to the development and optimization of websites for the ACM Web Team, supporting various college initiatives.}}
+        \resumeItem{\normalsize{Developed websites for IOIT TENET (\href{https://ioittenet.com}{ioittenet.com}) and IOIT MUN (\href{https://ioitmun.com}{ioitmun.com}).}}
+        \resumeItem{\normalsize{Worked collaboratively with a team of developers to deliver high-quality web solutions.}}
+        \resumeItem{\normalsize{Refactored existing codebases to improve scalability and maintainability.}}
+        \resumeItem{\normalsize{Technology Stack: Next.js, ReactJS, TypeScript, GSAP, Three.js.}}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\href{https://code-complexity-analyzer.vercel.app}{\textbf{\large{\underline{Code Complexity Analyzer}}}} \href{https://github.com/swarooppatilx/code-analyzer}{\raisebox{-0.2\height}\faGithub} \href{https://code-complexity-analyzer.vercel.app}{\raisebox{-0.2\height}\faLink}}{Oct 2024 – Oct 2024}
+      \resumeItemListStart
+       \resumeItem{\normalsize{Developed a web-based application to help developers analyze the complexity of their code, providing insights into both time and space complexity.}}
+       \resumeItem{\normalsize{Used Flask for the backend, Chart.js for data visualization, and Tailwind CSS for styling.}}
+       \resumeItem{\normalsize{Implemented code complexity metrics to calculate cyclomatic complexity, maintainability index, and other relevant metrics.}}
+       \resumeItem{\normalsize{Skills: Generative AI, Google Gemini, Flask, Tailwind CSS, Chart.js, Prism.js.}}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://scruter.vercel.app}{\textbf{\large{\underline{Scruter}}}} \href{https://github.com/swarooppatilx/scruter}{\raisebox{-0.2\height}\faGithub} \href{https://scruter.vercel.app}{\raisebox{-0.2\height}\faLink}}{Jul 2024 – Aug 2024}
+      \resumeItemListStart
+      \resumeItem{\normalsize{Scruter is a local classifieds and community site designed to bring people together for buying, selling, and exchanging goods and services.}}
+      \resumeItem{\normalsize{Developed features like user authentication, posting listings, and search functionalities.}}
+      \resumeItem{\normalsize{Skills: Bootstrap, JavaScript, Application Development, Express.js, Node.js, Progressive Web Applications (PWAs), REST APIs.}}
+      \resumeItemListEnd
+
+
+      \resumeProjectHeading
+        {\href{https://health-link-v1.vercel.app}{\textbf{\large{\underline{Health Link}}}} \href{https://github.com/swarooppatilx/health-link}{\raisebox{-0.2\height}\faGithub} \href{https://health-link-v1.vercel.app/}{\raisebox{-0.2\height}\faLink}}{Oct 2024 – Present}
+        \resumeItemListStart
+        \resumeItem{\normalsize{Developed a comprehensive healthcare app for appointment scheduling, managing medical records, viewing lab results, and booking vaccinations.}}
+        \resumeItem{\normalsize{Implemented user authentication, secure data storage, and real-time notifications.}}
+        \resumeItem{\normalsize{Skills: Next.js, TypeScript, MongoDB, ReactJS, Shadcn, Tailwind CSS, Progressive Web Applications (PWAs), REST APIs.}}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------ACHIEVEMENTS-----------
+\section{ACHIEVEMENTS}
+    \resumeSubHeadingListStart
+      \resumeItem{\normalsize{Won consolation prize at Navdhara Project Competition for Scruter, Organized by PCCOER, Pune.}}
+      \resumeItem{\normalsize{Won 40th place in Top 50 Project Admins at GirlScript Summer of Code 2024 Extended.}}
+    \resumeSubHeadingListEnd
+
+
+\end{document}
