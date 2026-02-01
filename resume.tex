@@ -56,8 +56,23 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% PDF settings
 \pdfgentounicode=1
+
+\renewcommand\labelitemi{\raisebox{0.2ex}{\tiny\textendash}}
+\renewcommand\labelitemii{\raisebox{0.2ex}{\tiny\textendash}}
+
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0.0in, label={}, itemsep=2pt, topsep=2pt]
+}
+\newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}
+}
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[leftmargin=0.15in, itemsep=2pt, topsep=2pt]
+}
+\newcommand{\resumeItemListEnd}{
+  \end{itemize}\vspace{-5pt}
+}
 
 % Custom commands
 \newcommand{\resumeItem}[1]{
@@ -81,23 +96,13 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
   {\Huge \scshape Swaroop Patil} \\ \vspace{1pt}
   Pune, Maharashtra \\ \vspace{1pt}
-  \small \href{mailto:swarooppatil850@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{swarooppatil850@gmail.com}} ~ 
+  \small \href{mailto:swaroopworks@proton.me}{\raisebox{-0.2\height}\faEnvelope\  \underline{swaroopworks@proton.me}} ~ 
   \href{https://linkedin.com/in/swarooppatilx}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin/swarooppatilx}}  ~
   \href{https://github.com/swarooppatilx}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/swarooppatilx}} ~
   \href{https://0xswaroop.xyz}{\raisebox{-0.2\height}\faGlobe\ \underline{0xswaroop.xyz}} ~
@@ -107,73 +112,72 @@
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
   \resumeSubheading
     {AISSMS Institute of Information Technology, Pune}{2023 – 2027}
     {B.Tech - Information Technology \quad CGPA: 8.03}{Pune, Maharashtra}
 \resumeSubHeadingListEnd
 
-
 %-------------EXPERIENCE-----------
 \section{Experience}
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
+\vspace{-5pt}
+\resumeSubHeadingListStart
 
-     \resumeProjectHeading
-    {\href{https://ioit.acm.org}{\textbf{IOIT ACM Web Team (Next.js, TypeScript, GSAP, Three.js, Flask, HTMX, Tailwind CSS)}}}{2024 - Present}\\
-    \resumeItemListStart
-    \resumeItem{\normalsize{Built and maintained websites for IOIT ACM (\href{https://ioit.acm.org}{ioit.acm.org}), IOIT TENET (\href{https://ioittenet.com}{ioittenet.com}), and IOIT MUN (\href{https://ioitmun.com}{ioitmun.com}).}}  
-    \resumeItem{\normalsize{Migrated the IOIT MUN codebase to enhance maintainability, scalability, and performance.}}  
-    \resumeItem{\normalsize{Developed ChapterOS (\href{https://os.ioit.acm.org}{os.ioit.acm.org}), an internal ERP-like system for managing chapter operations and activities.}}
-    \resumeItem{\normalsize{Developed CI/CD pipelines and wrote automation scripts to streamline deployment and task management processes.}}
-    \resumeItem{\normalsize{Organised a national level hackathon (\href{https://hack.ioittenet.com}{hack.ioittenet.com}) and developed the website for the hackathon.}}  
-    \resumeItemListEnd
+\resumeProjectHeading
+{\href{https://ioit.acm.org}{\textbf{IOIT ACM Web Team (Next.js, TypeScript, GSAP, Three.js, Flask, HTMX, Tailwind CSS)}}}{2024 - Present}\\
+\resumeItemListStart
+\resumeItem{\normalsize{Built and maintained websites for IOIT ACM (\href{https://ioit.acm.org}{ioit.acm.org}), IOIT TENET (\href{https://ioittenet.com}{ioittenet.com}), and IOIT MUN (\href{https://ioitmun.com}{ioitmun.com}).}}  
+\resumeItem{\normalsize{Migrated the IOIT MUN codebase to enhance maintainability, scalability, and performance.}}  
+\resumeItem{\normalsize{Developed ChapterOS (\href{https://os.ioit.acm.org}{os.ioit.acm.org}), an internal ERP-like system for managing chapter operations and activities.}}
+\resumeItem{\normalsize{Developed CI/CD pipelines and wrote automation scripts to streamline deployment and task management processes.}}
+\resumeItem{\normalsize{Organised a national level hackathon (\href{https://hack.ioittenet.com}{hack.ioittenet.com}) and developed the website for the hackathon.}}  
+\resumeItemListEnd
 
-    \resumeProjectHeading
-    {\href{https://www.nirvisdry.in/}{\textbf{Freelance Developer (Next.js, TypeScript, Tailwind CSS, PWA)}}}{Dec 2024}\\
-    \resumeItemListStart
-    \resumeItem{\normalsize{Developed a product catalog website for Gore Enterprises' Nirvis Dry System (\href{https://nirvisdry.in}{nirvisdry.in})}}
-    \resumeItem{\normalsize{Designed and built a fully responsive, mobile-friendly, and SEO-optimized website to enhance customer reach.}}
-    \resumeItem{\normalsize{Handled hosting, domain setup, and deployment for a seamless production environment.}}
-    \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\resumeProjectHeading
+{\textbf{Freelance Web Developer}}{2024}\\
+\resumeItemListStart
+\resumeItem{\normalsize{\href{https://nirvisdry.in}{Nirvis Dry System} — Built and deployed an SEO-optimized, responsive product catalog website for Gore Enterprises using Next.js, TypeScript, Tailwind CSS, including hosting and production setup.}}
+\resumeItem{\normalsize{\href{https://pixelriot.in}{Pixel Riot Media Agency} — Developed a high-performance media agency website using React, Vite, Framer Motion, and Tailwind CSS with modern animations and responsive design.}}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-  \resumeProjectHeading
-    {\href{https://ethglobal.com/showcase/bugchan-gdbtx}{\textbf{BugChan (Solidity, React, IPFS, Smart Contracts, Blockchain)}} \href{https://github.com/swarooppatilx/bug-chan}{\raisebox{-0.2\height}\faGithub} \href{https://bugchan.xyz}{\raisebox{-0.2\height}\faLink}}{Oct 2025}
-    \resumeItemListStart
-    \resumeItem{\normalsize{Built a decentralized bug bounty platform for Web3, connecting security researchers with blockchain projects through smart contract-powered bounties with transparent, trustless payouts.}}
-    \resumeItem{\normalsize{Implemented end-to-end client-side encryption for vulnerability reports stored on IPFS, ensuring data privacy while maintaining verifiable, time-stamped records on-chain.}}
-    \resumeItem{\normalsize{Won ETHOnline'25 Partner Prize by Blockscout - Best use of Autoscout self-service explorer launchpad (2nd place).}}
-    \resumeItemListEnd
+\resumeProjectHeading
+{\href{https://ethglobal.com/showcase/bugchan-gdbtx}{\textbf{BugChan (Solidity, React, IPFS, Smart Contracts, Blockchain)}} \href{https://github.com/swarooppatilx/bug-chan}{\raisebox{-0.2\height}\faGithub} \href{https://bugchan.xyz}{\raisebox{-0.2\height}\faLink}}{Oct 2025}
+\resumeItemListStart
+\resumeItem{\normalsize{Built a decentralized bug bounty platform for Web3, connecting security researchers with blockchain projects through smart contract-powered bounties with transparent, trustless payouts.}}
+\resumeItem{\normalsize{Implemented end-to-end client-side encryption for vulnerability reports stored on IPFS, ensuring data privacy while maintaining verifiable, time-stamped records on-chain.}}
+\resumeItem{\normalsize{Won ETHOnline'25 Partner Prize by Blockscout - Best use of Autoscout self-service explorer launchpad (2nd place).}}
+\resumeItemListEnd
 
-  \resumeProjectHeading
-  {\href{https://www.cetbaba.in}{\textbf{College Predictor (TypeScript, React, TailwindCSS, Next.js, MongoDB)}} 
-  \href{https://www.cetbaba.in}{\raisebox{-0.2\height}\faLink}}{May 2025}
-  \resumeItemListStart
-    \resumeItem{\normalsize{Built a full-stack web app to predict engineering and pharmacy college admission chances for JEE and MHT-CET aspirants.}}
-    \resumeItem{\normalsize{Scraped and parsed official admission cutoff data using custom web scraping tools to fuel prediction models.}}
-    \resumeItem{\normalsize{Grew to 1000+ users in 2 weeks post-launch with increasing daily active users and organic traction.}}
-  \resumeItemListEnd
-  
-  
-  \resumeProjectHeading
-    {\href{https://bit-by-query.onrender.com}{\textbf{Bit By Query (ExpressJS, React, Vite, Tailwind CSS, SQLlite, MySQL)}} \href{https://github.com/swarooppatilx/bit-by-query}{\raisebox{-0.2\height}\faGithub} \href{https://bit-by-query.onrender.com}{\raisebox{-0.2\height}\faLink}}{Jan 2025}
-    \resumeItemListStart
-    \resumeItem{\normalsize{Developed a competitive SQL platform for hosting SQL competitions and challenges. Users can create, participate in, and judge SQL challenges.}}
-    \resumeItem{\normalsize{Implemented secure user authentication, challenge evaluation, countdown and leaderboard.}}
-    \resumeItemListEnd
-  
-    \resumeProjectHeading
-        {\href{https://scruter.vercel.app}{\textbf{Scruter (Bootstrap, JavaScript, Express.js, Node.js, PWAs, REST APIs)}} \href{https://github.com/swarooppatilx/scruter}{\raisebox{-0.2\height}\faGithub} \href{https://scruter.vercel.app}{\raisebox{-0.2\height}\faLink}}{Jul 2024}
-        \resumeItemListStart
-        \resumeItem{\normalsize{Scruter is a local classifieds and community site designed to bring people together for buying, selling, and exchanging goods and services.}}
-        \resumeItem{\normalsize{Developed features like user authentication, posting listings, and search functionalities.}}
-        \resumeItemListEnd
+\resumeProjectHeading
+{\href{https://www.cetbaba.in}{\textbf{College Predictor (TypeScript, React, TailwindCSS, Next.js, MongoDB)}} 
+\href{https://www.cetbaba.in}{\raisebox{-0.2\height}\faLink}}{May 2025}
+\resumeItemListStart
+\resumeItem{\normalsize{Built a full-stack web app to predict engineering and pharmacy college admission chances for JEE and MHT-CET aspirants.}}
+\resumeItem{\normalsize{Scraped and parsed official admission cutoff data using custom web scraping tools to fuel prediction models.}}
+\resumeItem{\normalsize{Grew to 3000+ users in weeks post-launch with increasing daily active users and organic traction.}}
+\resumeItemListEnd
 
-    \resumeSubHeadingListEnd
+\resumeProjectHeading
+{\href{https://bit-by-query.onrender.com}{\textbf{Bit By Query (ExpressJS, React, Vite, Tailwind CSS, SQLlite, MySQL)}} \href{https://github.com/swarooppatilx/bit-by-query}{\raisebox{-0.2\height}\faGithub} \href{https://bit-by-query.onrender.com}{\raisebox{-0.2\height}\faLink}}{Jan 2025}
+\resumeItemListStart
+\resumeItem{\normalsize{Developed a competitive SQL platform for hosting SQL competitions and challenges. Users can create, participate in, and judge SQL challenges.}}
+\resumeItem{\normalsize{Implemented secure user authentication, challenge evaluation, countdown and leaderboard.}}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\href{https://scruter.vercel.app}{\textbf{Scruter (Bootstrap, JavaScript, Express.js, Node.js, PWAs, REST APIs)}} \href{https://github.com/swarooppatilx/scruter}{\raisebox{-0.2\height}\faGithub} \href{https://scruter.vercel.app}{\raisebox{-0.2\height}\faLink}}{Jul 2024}
+\resumeItemListStart
+\resumeItem{\normalsize{Scruter is a local classifieds and community site designed to bring people together for buying, selling, and exchanging goods and services.}}
+\resumeItem{\normalsize{Developed features like user authentication, posting listings, and search functionalities.}}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 \end{document}
+
