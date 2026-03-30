@@ -1,5 +1,11 @@
-\documentclass[letterpaper,11pt]{article}
+%-------------------------
+% Swaroop Patil Resume
+% License : MIT
+%------------------------
 
+\documentclass[a4paper,11pt]{article}
+
+% -------------------- PACKAGE IMPORTS --------------------
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -8,73 +14,48 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\usepackage{graphicx}
-\setlength{\columnsep}{-1pt}
+\usepackage{xcolor}
+% fontawesome5 fallback - define icon commands as text
+\newcommand{\faIcon}[1]{}
+\usepackage[version=4]{mhchem}
+
+% Unicode support for PDFs (makes it ATS parsable)
 \input{glyphtounicode}
 
-\RequirePackage{tikz}
-\RequirePackage{xcolor}
-\RequirePackage{fontawesome}
+% -------------------- PAGE LAYOUT --------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% Color definitions
-\definecolor{cvblue}{HTML}{0E5484}
-\definecolor{black}{HTML}{130810}
-\definecolor{darkcolor}{HTML}{0F4539}
-\definecolor{cvgreen}{HTML}{3BD80D}
-\definecolor{taggreen}{HTML}{00E278}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-
-% Color assignments
-\colorlet{name}{black}
-\colorlet{tagline}{darkcolor}
-\colorlet{heading}{darkcolor}
-\colorlet{headingrule}{cvblue}
-\colorlet{accent}{darkcolor}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-% Margin adjustments
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\topmargin}{-0.6in}
 \addtolength{\textheight}{1.4in}
 
-% Basic settings
 \urlstyle{same}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
+% -------------------- SECTION FORMATTING --------------------
 \titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\titleformat{\subsection}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
 
 \pdfgentounicode=1
 
-\renewcommand\labelitemi{\raisebox{0.2ex}{\tiny\textendash}}
-\renewcommand\labelitemii{\raisebox{0.2ex}{\tiny\textendash}}
-
-\newcommand{\resumeSubHeadingListStart}{
-  \begin{itemize}[leftmargin=0.0in, label={}, itemsep=2pt, topsep=2pt]
-}
-\newcommand{\resumeSubHeadingListEnd}{
-  \end{itemize}
-}
-\newcommand{\resumeItemListStart}{
-  \begin{itemize}[leftmargin=0.15in, itemsep=2pt, topsep=2pt]
-}
-\newcommand{\resumeItemListEnd}{
-  \end{itemize}\vspace{-5pt}
-}
-
-% Custom commands
+% -------------------- CUSTOM COMMANDS --------------------
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -83,101 +64,168 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
 \begin{document}
 
-%----------HEADING----------
+% -------------------- HEADING --------------------
 \begin{center}
-  {\Huge \scshape Swaroop Patil} \\ \vspace{1pt}
-  Pune, Maharashtra \\ \vspace{1pt}
-  \small \href{mailto:swaroopworks@proton.me}{\raisebox{-0.2\height}\faEnvelope\  \underline{swaroopworks@proton.me}} ~ 
-  \href{https://linkedin.com/in/swarooppatilx}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin/swarooppatilx}}  ~
-  \href{https://github.com/swarooppatilx}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/swarooppatilx}} ~
-  \href{https://0xswaroop.xyz}{\raisebox{-0.2\height}\faGlobe\ \underline{0xswaroop.xyz}} ~
+  \textbf{\Huge \scshape Swaroop Patil} \\ \vspace{8pt}
+  \small
+  Pune, Maharashtra $|$
+  \href{mailto:swaroopworks@proton.me}{\underline{\textcolor{blue}{swaroopworks@proton.me}}} $|$
+  \href{https://linkedin.com/in/swarooppatilx}{\underline{\textcolor{blue}{linkedin/swarooppatilx}}} $|$
+  \href{https://github.com/swarooppatilx}{\underline{\textcolor{blue}{github/swarooppatilx}}} $|$
+  \href{https://0xswaroop.xyz}{\underline{\textcolor{blue}{0xswaroop.xyz}}}
 \end{center}
 
-\vspace{0.5mm}
+% -------------------- SKILLS --------------------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=-2pt]
+    \small{
+        \item \textbf{Languages}{: TypeScript, JavaScript, Python, SQL, Solidity, Rust, Go, Java}
+        \item \textbf{Frontend}{: React, Next.js, Vite, Tailwind CSS, GSAP, Three.js, Framer Motion, React Native (Expo)}
+        \item \textbf{Backend \& Databases}{: Node.js, Express.js, Flask, Django, HTMX, REST APIs, PostgreSQL, MySQL, MongoDB, SQLite}
+        \item \textbf{DevOps \& Tools}{: Docker, Docker Compose, Git, Linux, CI/CD Pipelines, Vercel}
+        \item \textbf{Blockchain / Web3}{: Solidity, Foundry, Hardhat, IPFS, Ethers.js, Wagmi, Smart Contracts}
+    }
+\end{itemize}
 
-%-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {AISSMS Institute of Information Technology, Pune}{2023 – 2027}
-    {B.Tech - Information Technology \quad CGPA: 8.03}{Pune, Maharashtra}
-\resumeSubHeadingListEnd
-
-%-------------EXPERIENCE-----------
+% -------------------- EXPERIENCE --------------------
 \section{Experience}
-\vspace{-5pt}
-\resumeSubHeadingListStart
+  \resumeSubHeadingListStart
 
-\resumeProjectHeading
-{\href{https://ioit.acm.org}{\textbf{IOIT ACM Web Team (Next.js, TypeScript, GSAP, Three.js, Flask, HTMX, Tailwind CSS)}}}{2024 - Present}\\
-\resumeItemListStart
-\resumeItem{\normalsize{Built and maintained websites for IOIT ACM (\href{https://ioit.acm.org}{ioit.acm.org}), IOIT TENET (\href{https://ioittenet.com}{ioittenet.com}), and IOIT MUN (\href{https://ioitmun.com}{ioitmun.com}).}}  
-\resumeItem{\normalsize{Migrated the IOIT MUN codebase to enhance maintainability, scalability, and performance.}}  
-\resumeItem{\normalsize{Developed ChapterOS (\href{https://os.ioit.acm.org}{os.ioit.acm.org}), an internal ERP-like system for managing chapter operations and activities.}}
-\resumeItem{\normalsize{Developed CI/CD pipelines and wrote automation scripts to streamline deployment and task management processes.}}
-\resumeItem{\normalsize{Organised a national level hackathon (\href{https://hack.ioittenet.com}{hack.ioittenet.com}) and developed the website for the hackathon.}}  
-\resumeItemListEnd
+    \resumeProjectHeading
+    {\textbf{Co-Founder, Sieg Project} $|$ \footnotesize\emph{React, Next.js, Node.js, Django}}{Dec. 2025 -- Present}
+    \resumeItemListStart
+        \resumeItem{Co-founded a software product company, leading technical architecture and full-stack development of web solutions.}
+        \resumeItem{Driving end-to-end product development across frontend (React, Next.js) and backend (Node.js, Django) stacks.}
+    \resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{Freelance Web Developer}}{2024}\\
-\resumeItemListStart
-\resumeItem{\normalsize{\href{https://nirvisdry.in}{Nirvis Dry System} — Built and deployed an SEO-optimized, responsive product catalog website for Gore Enterprises using Next.js, TypeScript, Tailwind CSS, including hosting and production setup.}}
-\resumeItem{\normalsize{\href{https://pixelriot.in}{Pixel Riot Media Agency} — Developed a high-performance media agency website using React, Vite, Framer Motion, and Tailwind CSS with modern animations and responsive design.}}
-\resumeItemListEnd
+    \resumeProjectHeading
+    {\textbf{Webmaster, \href{https://ioit.acm.org/}{\textcolor{blue}{IOIT ACM Student Chapter}}} $|$ \footnotesize\emph{Next.js, TypeScript, Django, Flask, HTMX, Three.js, Tailwind}}{Jul. 2024}
+    \resumeItemListStart
+        \resumeItem{Built and maintained production websites:
+          \href{https://ioit.acm.org/}{\textcolor{blue}{IOIT ACM}}
+          (\href{https://github.com/IOIT-ACM/ioit.acm}{\textcolor{blue}{repo}}),
+          \href{https://ioittenet.com/}{\textcolor{blue}{IOIT TENET}}
+          (\href{https://github.com/IOIT-ACM/ioit-tenet}{\textcolor{blue}{repo}}), and
+          \href{https://mun.ioittenet.com/}{\textcolor{blue}{IOIT MUN}}
+          (\href{https://github.com/IOIT-ACM/ioit-mun}{\textcolor{blue}{repo}}).}
+        \resumeItem{Architected \href{https://os.ioit.acm.org/}{\textcolor{blue}{ChapterOS}}
+          (\href{https://github.com/IOIT-ACM/ChapterOS}{\textcolor{blue}{repo}}), an internal ERP system built with Django, MySQL, Docker Compose, and Tailwind CSS for managing chapter operations.}
+        \resumeItem{Developed and maintained CI/CD pipelines and automation scripts to streamline deployment workflows.}
+        \resumeItem{Organized TENET Hack '25, a national-level hackathon, and built the \href{https://hack.ioittenet.com/}{\textcolor{blue}{event website}}.}
+         \resumeItem{\href{https://yp.ioit.acm.org/}{\textcolor{blue}{Youth Parliament 2026}} (\href{https://github.com/IOIT-ACM/yp.ioit.acm}{\textcolor{blue}{repo}}) — Developed with React, Vite, GSAP, and Framer Motion.}
+    \resumeItemListEnd
 
-\resumeSubHeadingListEnd
+    \resumeProjectHeading
+    {\textbf{Full Stack Developer, Freelance}}{Jan2024}
+    \resumeItemListStart
+        \resumeItem{\href{https://nirvisdry.in/}{\textcolor{blue}{Nirvis Dry System}} — Designed and deployed an SEO-optimized, responsive product catalog using Next.js, TypeScript, and Tailwind CSS, including production hosting setup.}
+        \resumeItem{\href{https://pixelriot.in/}{\textcolor{blue}{Pixel Riot Media Agency}} — Built a high-performance agency website using React, Vite, Framer Motion, and Tailwind CSS with advanced animations.}
+    \resumeItemListEnd
 
-%-----------PROJECTS-----------
+  \resumeSubHeadingListEnd
+
+% -------------------- PROJECTS --------------------
 \section{Projects}
 \resumeSubHeadingListStart
 
-\resumeProjectHeading
-{\href{https://ethglobal.com/showcase/bugchan-gdbtx}{\textbf{BugChan (Solidity, React, IPFS, Smart Contracts, Blockchain)}} \href{https://github.com/swarooppatilx/bug-chan}{\raisebox{-0.2\height}\faGithub} \href{https://bugchan.xyz}{\raisebox{-0.2\height}\faLink}}{Oct 2025}
-\resumeItemListStart
-\resumeItem{\normalsize{Built a decentralized bug bounty platform for Web3, connecting security researchers with blockchain projects through smart contract-powered bounties with transparent, trustless payouts.}}
-\resumeItem{\normalsize{Implemented end-to-end client-side encryption for vulnerability reports stored on IPFS, ensuring data privacy while maintaining verifiable, time-stamped records on-chain.}}
-\resumeItem{\normalsize{Won ETHOnline'25 Partner Prize by Blockscout - Best use of Autoscout self-service explorer launchpad (2nd place).}}
-\resumeItemListEnd
+    \resumeProjectHeading
+    {\href{https://www.cetbaba.in/}{\textbf{\textcolor{blue}{College Predictor (cetbaba.in)}}} $|$ \footnotesize\emph{TypeScript, React, Next.js, MongoDB}}{May 2025 -- Present}
+    \resumeItemListStart
+        \resumeItem{Full-stack web app predicting engineering and pharmacy college admission chances for JEE and MHT-CET aspirants.}
+        \resumeItem{Built custom web scraping tools to parse official government admission cutoff data into a MongoDB database.}
+        \resumeItem{Grew to \textbf{3,000+ registered users} within weeks of launch, driven entirely by organic traction.}
+    \resumeItemListEnd
 
-\resumeProjectHeading
-{\href{https://www.cetbaba.in}{\textbf{College Predictor (TypeScript, React, TailwindCSS, Next.js, MongoDB)}} 
-\href{https://www.cetbaba.in}{\raisebox{-0.2\height}\faLink}}{May 2025}
-\resumeItemListStart
-\resumeItem{\normalsize{Built a full-stack web app to predict engineering and pharmacy college admission chances for JEE and MHT-CET aspirants.}}
-\resumeItem{\normalsize{Scraped and parsed official admission cutoff data using custom web scraping tools to fuel prediction models.}}
-\resumeItem{\normalsize{Grew to 3000+ users in weeks post-launch with increasing daily active users and organic traction.}}
-\resumeItemListEnd
+    \resumeProjectHeading
+    {\href{https://bugchan.xyz/}{\textbf{\textcolor{blue}{BugChan}}} (\href{https://github.com/swarooppatilx/bug-chan}{\textcolor{blue}{repo}}) $|$ \footnotesize\emph{Solidity, React, IPFS, Smart Contracts, Blockchain}}{Oct. 2025}
+    \resumeItemListStart
+        \resumeItem{Built a decentralized bug bounty platform connecting security researchers with Web3 projects via smart contract-powered, trustless payouts.}
+        \resumeItem{Implemented end-to-end client-side encryption for vulnerability reports stored on IPFS with verifiable on-chain timestamps.}
+        \resumeItem{Won \textbf{ETHOnline '25 Blockscout Partner Prize} (2nd Place, 1,000 USDC) for best use of AutoScout.}
+    \resumeItemListEnd
 
-\resumeProjectHeading
-{\href{https://bit-by-query.onrender.com}{\textbf{Bit By Query (ExpressJS, React, Vite, Tailwind CSS, SQLlite, MySQL)}} \href{https://github.com/swarooppatilx/bit-by-query}{\raisebox{-0.2\height}\faGithub} \href{https://bit-by-query.onrender.com}{\raisebox{-0.2\height}\faLink}}{Jan 2025}
-\resumeItemListStart
-\resumeItem{\normalsize{Developed a competitive SQL platform for hosting SQL competitions and challenges. Users can create, participate in, and judge SQL challenges.}}
-\resumeItem{\normalsize{Implemented secure user authentication, challenge evaluation, countdown and leaderboard.}}
-\resumeItemListEnd
+    \resumeProjectHeading
+    {\href{https://bit-by-query.onrender.com/}{\textbf{\textcolor{blue}{Bit By Query}}} (\href{https://github.com/swarooppatilx/bit-by-query}{\textcolor{blue}{repo}}) $|$ \footnotesize\emph{Express.js, React, Vite, Tailwind CSS, MySQL, SQLite}}{Jan. 2025}
+    \resumeItemListStart
+        \resumeItem{Developed a competitive SQL challenge platform with real-time query evaluation, countdown timers, and live leaderboards.}
+        \resumeItem{Implemented secure JWT-based authentication, challenge creation/judging workflows, and role-based access control.}
+        \resumeItem{Won \textbf{3rd Place} at Innovex '25 Project Competition organized by AIT Pune R\&D Cell.}
+    \resumeItemListEnd
 
-\resumeProjectHeading
-{\href{https://scruter.vercel.app}{\textbf{Scruter (Bootstrap, JavaScript, Express.js, Node.js, PWAs, REST APIs)}} \href{https://github.com/swarooppatilx/scruter}{\raisebox{-0.2\height}\faGithub} \href{https://scruter.vercel.app}{\raisebox{-0.2\height}\faLink}}{Jul 2024}
-\resumeItemListStart
-\resumeItem{\normalsize{Scruter is a local classifieds and community site designed to bring people together for buying, selling, and exchanging goods and services.}}
-\resumeItem{\normalsize{Developed features like user authentication, posting listings, and search functionalities.}}
-\resumeItemListEnd
+    \resumeProjectHeading
+    {\href{https://scruter.vercel.app/}{\textbf{\textcolor{blue}{Scruter}}} (\href{https://github.com/swarooppatilx/scruter-nextjs}{\textcolor{blue}{repo}}) $|$ \footnotesize\emph{Next.js, Node.js, Express.js, Bootstrap, REST APIs, PWA}}{Jul. 2024}
+    \resumeItemListStart
+        \resumeItem{Full-stack local classifieds marketplace with user authentication, listing management, search, and Progressive Web App support.}
+        \resumeItem{Managed as a GirlScript Summer of Code project; migrated to Next.js for improved performance.}
+    \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
-\end{document}
+  % -------------------- OPEN SOURCE --------------------
+\section{Open Source}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+    {\textbf{\href{https://github.com/OWASP-BLT/BLT-Next}{\textcolor{blue}{OWASP-BLT/BLT-Next}}} $|$ \footnotesize\emph{Next.js, HTMX, React}}{}
+    \resumeItemListStart
+        \resumeItem{Auth pages with client-side validation (\href{https://github.com/OWASP-BLT/BLT-Next/pull/32}{\textcolor{blue}{\#32}}), reusable HTMX components (\href{https://github.com/OWASP-BLT/BLT-Next/pull/111}{\textcolor{blue}{\#111}}), and mobile navbar fix (\href{https://github.com/OWASP-BLT/BLT-Next/pull/113}{\textcolor{blue}{\#113}}).}
+    \resumeItemListEnd
+    \resumeProjectHeading
+    {\textbf{\href{https://github.com/alexdedyura/cpu-benchmark}{\textcolor{blue}{cpu-benchmark}}} $|$ \footnotesize\emph{Python}}{}
+    \resumeItemListStart
+        \resumeItem{Added multi-core benchmarks and graceful interrupt handling (\href{https://github.com/alexdedyura/cpu-benchmark/pull/29}{\textcolor{blue}{PR \#29}}).}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
+% -------------------- ACHIEVEMENTS --------------------
+\section{Achievements}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=-1pt]
+    \footnotesize
+    \item \textbf{ETHMumbai '26} — Won ENS Sponsor Track Prize (\textbf{1,000 USDC}) for project Paper.
+    \item \textbf{Innerve X '26} — Top 40 finalist out of 10,000+ teams from across India (organized by AIT Pune \& Major League Hacking).
+    \item \textbf{ETHOnline '25} — Blockscout Partner Prize Winner,\textbf{ 2nd Place} (\textbf{1,000 USDC}) — Best use of AutoScout.
+    \item \textbf{Innovex '25} — 3rd Place, Project Competition organized by AIT Pune R\&D Cell for Bit By Query.
+    \item \textbf{CTF '24} — 6th Place, Cybersecurity Capture The Flag competition at SCIT, Pune.
+\end{itemize}
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {AISSMS Institute of Information Technology, Pune}{2023 -- 2027}
+      {B.Tech in Information Technology}{CGPA: 8.03/10}
+  \resumeSubHeadingListEnd
+
+\end{document}
